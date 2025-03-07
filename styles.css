@@ -1,0 +1,409 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin-left:10%;
+    margin-right:10% ;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.header {
+    width: 90%;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+/* Solid Black Line */
+.header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px; /* Thickness of the black line */
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Download Button */
+.download-btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+
+    font-weight: bold;
+}
+.download-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Container for All Sections */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FACTSHEET STYLING */
+.factsheet {
+    text-align:left;
+    
+    
+}
+
+.factsheet h2 {
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+
+/* Container for horizontal layout */
+.factsheet-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Individual Fact Items */
+.factsheet-item {
+    margin-right: 100px;
+    text-align: left;
+    
+}
+
+/* Divider (Vertical Line) */
+.divider {
+    width: 3px;
+    height: 50px;
+    background-color: black;
+}
+
+/* Logo Styling */
+.factsheet-item-logo img {
+    width: 100px; /* Adjust size as needed */
+    margin-left: 50%;
+}
+
+
+/* Section Styling */
+section {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, h3 {
+    color: black;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-info-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    
+}
+
+.company-info-header h2 {
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.company-info-header::after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-color: black;
+    margin-top: 13px;
+}
+
+.headers{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.headers h3{
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents wrapping */
+    
+}
+.headers h2{
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents wrapping */
+    
+}
+.headers::after{
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-color: black;
+    margin-top: 13px;
+}
+
+
+
+
+/* Financial Stats - Flexbox Grid */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    
+    
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    background:#d32f2f;
+    padding: 15px;
+    text-align: center;
+    color: #f8f8f8;
+    align-items: center;
+    justify-content: center;
+    width: 20%; /* Adjust based on your design */
+    height: 50px; /* Adjust based on your design */
+}
+
+/* Gross Premiums & Markets - Side by Side */
+.premium-market {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 300px;
+    position: relative;
+}
+
+.gross-written-premiums {
+    flex: 0 0 40%;
+}
+
+.our-markets {
+    flex: 0 0 60%;
+    position: relative;
+}
+
+.map-container {
+    position: absolute;
+    width: 100%;
+    top: -100%;
+    left: -20%;
+}
+
+.map-container img {
+    width: 100%; /* Extends slightly beyond its container */
+    position: relative;
+    z-index: -1;
+  
+
+}
+
+
+
+/* Key Figures - Responsive Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 3px solid black;
+}
+th {
+    background-color: white; /* White background for headers */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    
+    background-color: #f2f2f2; /* Light gray background for alternate rows */
+}
+
+tr:first-child, tr:last-child {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black; /* Black top and bottom lines */
+}
+
+.small-text{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Investment Story - Flexbox Layout */
+.investment-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Individual Investment Boxes */
+.investmentS-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%; /* Ensures two boxes per row */
+    min-width: 300px;
+    max-width: 48%;
+}
+
+/* Titles */
+.investmentS-box h4 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Content Box */
+.investment-box {
+    background: #d32f2f;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    text-align: left;
+    min-height: 100px; /* Ensures all boxes have equal height */
+    display: flex;
+    align-items: center; /* Vertically aligns text inside the box */
+}
+
+/* Make lists inside the box look proper */
+.investment-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.investment-box li {
+    margin-bottom: 5px;
+}
+/* Style for the icon */
+.icon {
+    width: 20px; /* Adjust image size */
+    height: 20px;
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.performance-data{
+    width: 100%;
+}
+.performance-img{
+    width: 100%;
+}
+.shareholder-structure {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 300px;
+    position: relative;
+}
+
+.shareholder-container {
+    flex: 0 0 70%;
+    width: 100%;
+}
+.shareholder-container img{
+    width: 80%;
+}
+
+.dividend-container {
+    flex: 0 0 30%;
+    position: relative;
+}
+.dividend-container img{
+    width: 100%;
+}
+
+/* Management Board - Centered Flex */
+.management {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.more-details{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    
+}
+.finance{
+    flex: 0 0 70%;
+}
+.info{
+    flex: 0 0 30%;
+}
+.persona-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin: auto;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.persona{
+    width: 100%;
+    border: 10%;
+    border: 5px solid #d32f2f;
+    padding-left: 20px;
+    
+}
+.financial-calendar table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.financial-calendar td{
+    border: none; /* Remove all borders */
+    padding: 5px;
+    border: 0 white
+    
+}
+
+
+.financial-calendar tr:nth-child(even) {
+    
+    background-color: white; /* Light gray background for alternate rows */
+}
+
+.financial-calendar tr:first-child, tr:last-child {
+    border-top: 0px solid white;
+    border-bottom: 0px solid white; /* Black top and bottom lines */
+}
